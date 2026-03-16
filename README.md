@@ -197,15 +197,18 @@ struct _music{
 ```
 Playlist-C/
 │
-├── app/        # Arquivos principais da aplicação (main)
-├── bin/        # Executáveis gerados
-├── include/    # Arquivos de cabeçalho (.h)
-├── obj/        # Arquivos objeto (.o)
-├── src/        # Código-fonte da aplicação (.c)
+├── app/             # Arquivos principais da aplicação (main)
+├── bin/             # Executáveis gerados
+├── include/         # Arquivos de cabeçalho (.h)
+├── obj/             # Arquivos objeto (.o)
+├── src/             # Código-fonte da aplicação (.c)
 │
-├── Makefile    # Regras de compilação
-├── README.md   # Documentação do projeto
-└── LICENSE     # Licença do projeto
+├── Musics.txt       # Arquivo contendo as músicas para carregar
+├── My Playlist.txt  # Arquivo que guarda as músicas salvas pelo usuário
+│
+├── Makefile         # Regras de compilação
+├── README.md        # Documentação do projeto
+└── LICENSE          # Licença do projeto
 ```
 
 ---

@@ -86,7 +86,7 @@ int main() {
 
                     case 2:
                         int h;
-                        PlayListLoadFromFile(playList, "musics.txt", &f, &h);
+                        PlayListLoadFromFile(playList, "Musics.txt", &f, &h);
                         if(h == 1){
                             printf("+---------------------------------------------------------------------------+\n");
                             printf("+ MÚSICA(S) ADICIONADA COM SUCESSO -----------------------------------------+\n");
