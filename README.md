@@ -278,6 +278,6 @@ Este projeto está licenciado sob a **Licença MIT**.
 
 **Natam Leão Ferreira**
 
-Ano: **15/06/2022**
+Data: **15/06/2022**
 
 ---
