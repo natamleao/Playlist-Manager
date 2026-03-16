@@ -16,6 +16,18 @@ static void PlayListDecrementSize(PlayList *playList){if(playList->_size>0) play
 unsigned int PlayListGetCapacity(PlayList *playList){return playList->_capacity;}
 void PlayListSetCapacity(PlayList *playList, unsigned int capacity){playList->_capacity = capacity;}
 
+unsigned int PlayListDuration(PlayList *playList){
+    unsigned int totalTime = 0.0;
+    Music *aux = PlayListGetBegin(playList);
+    
+    for(unsigned int i = 0; i < PlayListGetSize(playList); i++){
+        totalTime += MusicGetDurationTime(aux);
+        aux = MusicGetNext(aux);
+    }
+
+    return totalTime;
+}
+
 /***************************************************** PUBLIC INTERFACE *******************************************************/
 
 PlayList *PlayListCreate(){
@@ -128,6 +140,118 @@ void PlayListLoadFromFile(PlayList *playList, char *fileName, int *f, int *h){
     fclose(file);
 
     (*h) = 1;
+}
+
+void PlayListSortByDuration(PlayList *playList){
+    if(!playList || PlayListGetSize(playList) < 2) return;
+
+    Music *begin = PlayListGetBegin(playList);
+    Music *i = begin;
+
+    do{
+        Music *j = MusicGetNext(i);
+
+        while(j != begin){
+            if(MusicGetDurationTime(i) > MusicGetDurationTime(j)){
+
+                char *musicTmp = MusicGetMusicName(i);
+                char *artistTmp = MusicGetArtistName(i);
+                unsigned int timeTmp = MusicGetDurationTime(i);
+
+                MusicSetMusicName(i, MusicGetMusicName(j));
+                MusicSetArtistName(i, MusicGetArtistName(j));
+                MusicSetDurationTime(i, MusicGetDurationTime(j));
+
+                MusicSetMusicName(j, musicTmp);
+                MusicSetArtistName(j, artistTmp);
+                MusicSetDurationTime(j, timeTmp);
+            }
+
+            j = MusicGetNext(j);
+        }
+
+        i = MusicGetNext(i);
+
+    } while(i != begin);
+}
+
+Music *PlayListSearch(PlayList *playList, char *music, int *f){
+    if(!playList || !music) return NULL;
+
+    Music *aux = PlayListGetBegin(playList);
+
+    for(unsigned int i = 0; i < PlayListGetSize(playList); i++){
+        if(strcmp(MusicGetMusicName(aux), music) == 0){
+            (*f) = 1;
+            return aux;
+        }
+
+        aux = MusicGetNext(aux);
+    }
+
+    (*f) = 0;
+    return NULL;
+}
+
+void PlayListSaveToFile(PlayList *playList, char *fileName, int *f){
+    if(!playList || !fileName) return;
+
+    FILE *file = fopen(fileName, "w");
+
+    if(!file){
+        (*f) = 0;
+        return;
+    }
+
+    Music *aux = PlayListGetBegin(playList);
+
+    for(unsigned int i = 0; i < PlayListGetSize(playList); i++){
+        fprintf(file, "%s;%s;%u\n", MusicGetArtistName(aux), MusicGetMusicName(aux), MusicGetDurationTime(aux));
+
+        aux = MusicGetNext(aux);
+    }
+
+    fclose(file);
+
+    (*f) = 1;
+}
+
+void PlayListStats(PlayList *playList){
+    if(!playList || PlayListGetSize(playList) == 0) return;
+
+    unsigned int totalTime = PlayListDuration(playList);
+    unsigned int size = PlayListGetSize(playList);
+
+    unsigned int hours = totalTime / 3600;
+    unsigned int minutes = (totalTime % 3600) / 60;
+    unsigned int seconds = totalTime % 60;
+
+    double average = (double) totalTime / size;
+
+    Music *aux = PlayListGetBegin(playList);
+
+    Music *longest = aux;
+    Music *shortest = aux;
+
+    for(unsigned int i = 0; i < PlayListGetSize(playList); i++){
+        if(MusicGetDurationTime(aux) > MusicGetDurationTime(longest))
+            longest = aux;
+
+        if(MusicGetDurationTime(aux) < MusicGetDurationTime(shortest))
+            shortest = aux;
+
+        aux = MusicGetNext(aux);
+    }
+
+    printf("+---------------------------------------------------------------------------+\n");
+    printf("+ MÚSICA MAIS LONGA: %s | %s | %u seg\n", MusicGetMusicName(longest), MusicGetArtistName(longest), MusicGetDurationTime(longest));
+    printf("+---------------------------------------------------------------------------+\n");
+    printf("+ MÚSICA MAIS CURTA: %s | %s | %u seg\n", MusicGetMusicName(shortest), MusicGetArtistName(shortest), MusicGetDurationTime(shortest));
+    printf("+---------------------------------------------------------------------------+\n");
+    printf("+ DURAÇÃO TOTAL DA PLAYLIST: %u h %u min %u s\n", hours, minutes, seconds);
+    printf("+---------------------------------------------------------------------------+\n");
+    printf("+ DURAÇÃO MÉDIA DAS MÚSICAS: %.2f segundos\n", average);
+    printf("+---------------------------------------------------------------------------+\n");
 }
 
 void PlayListPrint(PlayList *playList){

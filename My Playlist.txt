@@ -1,0 +1,20 @@
+Eminem;Lose Yourself;326
+Coldplay;Viva La Vida;242
+Adele;Rolling in the Deep;228
+Imagine Dragons;Believer;204
+Rihanna;Diamonds;225
+Linkin Park;Numb;187
+Michael Jackson;Billie Jean;294
+Queen;Bohemian Rhapsody;354
+Bruno Mars;Uptown Funk;270
+The Weeknd;Blinding Lights;200
+Anitta;Envolver;215
+Drake;God's Plan;198
+Arctic Monkeys;Do I Wanna Know;272
+Ed Sheeran;Shape of You;233
+Taylor Swift;Blank Space;231
+Daft Punk;Get Lucky;248
+Travis Scott;Sicko Mode;312
+Post Malone;Circles;215
+Kanye West;Stronger;311
+Imagine Dragons;Thunder;187

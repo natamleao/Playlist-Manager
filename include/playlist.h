@@ -121,6 +121,38 @@ void PlayListRemove(PlayList *playList, char *music, int *f);
 void PlayListLoadFromFile(PlayList *playList, char *fileName, int *f, int *h);
 
 /**
+ * @brief Ordena a playlist pelo tempo de duração das músicas
+ * 
+ * @param playList Ponteiro para a playlist
+ */
+void PlayListSortByDuration(PlayList *playList);
+
+/**
+ * @brief Busca por uma música na playlist
+ * 
+ * @param playList Ponteiro para a playlist
+ * @param music A música procurada
+ * @param f Flag para saber se a música foi encontrada
+ */
+Music *PlayListSearch(PlayList *playList, char *music, int *f);
+
+/**
+ * @brief Salva a playlist em um arquivo
+ * 
+ * @param playList Ponteiro para a playlist
+ * @param fileName O nome do arquivo onde a playlist será salva
+ * @param f Flag para verificar se o arquivo foi salvo 
+ */
+void PlayListSaveToFile(PlayList *playList, char *fileName, int *f);
+
+/**
+ * @brief Estatísticas da playlist (música mais longa, música mais curta, duração total e média)
+ * 
+ * @param playList Ponteiro para a playlist
+ */
+void PlayListStats(PlayList *playList);
+
+/**
  * @brief Imprime todas as músicas da playlist
  * 
  * @param playList Ponteiro para a playlist

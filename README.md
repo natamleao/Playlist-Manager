@@ -1,10 +1,277 @@
--------------------------INFORMACOES IMPORTANTES-------------------------
--------------------------------------------------------------------------
---------------------COMPILACAO E EXECUCAO NO TERMINAL--------------------
--------------------------------------------------------------------------
-Para compilar a biblioteca e o .exe, use: 'make'
--------------------------------------------------------------------------
-Para rodar o programa .exe, use: 'make run'
--------------------------------------------------------------------------
-para excluir os arquivos compilados, use: 'make clean'
--------------------------------------------------------------------------
+# 🎵 Playlist Manager em C
+
+![Language](https://img.shields.io/badge/language-C-blue)
+![Standard](https://img.shields.io/badge/standard-C11-orange)
+![Build](https://img.shields.io/badge/build-Makefile-green)
+![Data Structure](https://img.shields.io/badge/data_structure-linked_list-yellow)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+---
+
+# Sobre o projeto
+
+Este projeto implementa um **gerenciador de playlist de músicas em C**, utilizando **lista encadeada circular** como estrutura de dados principal.
+
+O sistema permite **armazenar, manipular e analisar músicas** dentro de uma playlist, oferecendo funcionalidades como:
+
+* inserção
+* remoção
+* busca
+* ordenação
+* estatísticas
+* leitura e escrita em arquivos
+
+O objetivo principal do projeto é praticar **estruturas de dados, manipulação de ponteiros e organização modular de código em C**.
+
+---
+
+# Demonstração
+
+Exemplo de execução do programa no terminal:
+
+```
++---------------------------------------------------------------------------+
++-------------------------------- BEM-VINDO --------------------------------+
++---------------------------------------------------------------------------+
++------------------------------ MENU PRINCIPAL -----------------------------+
++---------------------------------------------------------------------------+
++ 1 - ADICIONAR MÚSICA -----------------------------------------------------+
++---------------------------------------------------------------------------+
++ 2 - REMOVER MÚSICA -------------------------------------------------------+
++---------------------------------------------------------------------------+
++ 3 - BUSCAR MÚSICA --------------------------------------------------------+
++---------------------------------------------------------------------------+
++ 4 - ORDENAR PLAYLIST -----------------------------------------------------+
++---------------------------------------------------------------------------+
++ 5 - SALVAR PLAYLIST ------------------------------------------------------+
++---------------------------------------------------------------------------+
++ 6 - ESTATÍSTICAS ---------------------------------------------------------+
++---------------------------------------------------------------------------+
++ 7 - TOCAR PLAYLIST -------------------------------------------------------+
++---------------------------------------------------------------------------+
++ 8 - MOSTRAR PLAYLIST -----------------------------------------------------+
++---------------------------------------------------------------------------+
++ 0 - SAIR -----------------------------------------------------------------+
++---------------------------------------------------------------------------+
++ ESCOLHA UMA OPÇÃO: 
+```
+
+---
+
+# Tecnologias utilizadas
+
+* **C (padrão C11)**
+* **GNU Make**
+* Estrutura de dados: **lista encadeada circular**
+
+---
+
+# Conceitos aplicados
+
+Este projeto utiliza diversos conceitos fundamentais da linguagem C:
+
+* Alocação dinâmica de memória (`malloc`, `free`)
+* Manipulação de ponteiros
+* Estrutura de dados: **lista encadeada**
+* Encapsulamento utilizando arquivos `.h`
+* Modularização do código
+* Separação entre **interface e implementação**
+* Manipulação de arquivos (`fopen`, `fscanf`, `fprintf`)
+* Organização de projetos em múltiplos diretórios
+* Automação da compilação com `Makefile`
+
+---
+
+# Funcionalidades
+
+## Adicionar música
+
+Permite inserir novas músicas na playlist informando:
+
+* nome da música
+* nome do artista
+* duração da música
+
+---
+
+## Remover música
+
+Remove uma música da playlist através do **nome da música**.
+
+---
+
+## Buscar música
+
+Localiza uma música específica dentro da playlist.
+
+---
+
+## Ordenar playlist
+
+Permite ordenar a playlist com base na **duração das músicas**.
+
+---
+
+## Exibir playlist
+
+Mostra todas as músicas armazenadas na playlist:
+
+* nome da música
+* artista
+* duração
+
+---
+
+## Executar playlist
+
+Simula a reprodução da playlist percorrendo a lista circular.
+
+O usuário pode escolher quantas vezes a playlist será reproduzida.
+
+---
+
+## Estatísticas da playlist
+
+O sistema calcula:
+
+* música mais longa
+* música mais curta
+* duração total da playlist
+* duração média das músicas
+
+---
+
+## Carregar playlist de arquivo
+
+Permite carregar músicas automaticamente de um arquivo `.txt`.
+
+Formato esperado:
+
+```
+Artista;Musica;Duracao
+```
+
+Exemplo:
+
+```
+Eminem;Lose Yourself;326
+Coldplay;Viva La Vida;242
+Adele;Rolling in the Deep;228
+```
+
+---
+
+## Salvar playlist em arquivo
+
+Permite salvar todas as músicas da playlist em um arquivo `.txt`.
+
+---
+
+# Estrutura de dados
+
+A playlist é implementada utilizando **lista encadeada circular**.
+
+```
+HEAD
+ ↓
+[Music 1] → [Music 2] → [Music 3]
+   ↑                          ↓
+   └───────────────←──────────┘
+```
+
+Estrutura de cada nó:
+
+```
+struct _music{
+    char *_musicName;
+    char *_artistName;
+    unsigned int _durationTime;
+    struct _music *_next;
+};
+```
+
+---
+
+# Estrutura do projeto
+
+```
+Playlist-C/
+│
+├── app/        # Arquivos principais da aplicação (main)
+├── bin/        # Executáveis gerados
+├── include/    # Arquivos de cabeçalho (.h)
+├── obj/        # Arquivos objeto (.o)
+├── src/        # Código-fonte da aplicação (.c)
+│
+├── Makefile    # Regras de compilação
+├── README.md   # Documentação do projeto
+└── LICENSE     # Licença do projeto
+```
+
+---
+
+# Requisitos
+
+Para compilar e executar o projeto é necessário:
+
+* **GCC ou Clang**
+* **GNU Make**
+* Sistema **Linux ou macOS**
+
+---
+
+# Instalação
+
+Clone o repositório:
+
+```bash
+git clone git@github.com:natamleao/Playlist-C.git
+cd Playlist-C
+```
+
+---
+
+# Compilação
+
+Compile o projeto com:
+
+```bash
+make
+```
+
+---
+
+# Execução
+
+Execute o programa com:
+
+```bash
+make run
+```
+
+---
+
+# Limpeza do projeto
+
+Remover arquivos compilados:
+
+```bash
+make clean
+make cleanapp
+```
+
+---
+
+# Licença
+
+Este projeto está licenciado sob a **Licença MIT**.
+
+---
+
+# Autor
+
+**Natam Leão Ferreira**
+
+Ano: **15/06/2022**
+
+---
