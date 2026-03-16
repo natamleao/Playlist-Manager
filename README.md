@@ -231,8 +231,8 @@ Para compilar e executar o projeto é necessário:
 Clone o repositório:
 
 ```bash
-git git@github.com:natamleao/Circular-Linked-List.git
-cd Circular-Linked-List
+git git@github.com:natamleao/Playlist-Manager.git
+cd Playlist-Manager
 ```
 
 ---
