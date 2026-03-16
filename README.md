@@ -86,11 +86,33 @@ Este projeto utiliza diversos conceitos fundamentais da linguagem C:
 
 ## Adicionar música
 
-Permite inserir novas músicas na playlist informando:
+O sistema permite adicionar músicas à playlist de duas formas:
+
+### Inserção manual
+
+O usuário pode inserir músicas diretamente pelo terminal informando:
 
 * nome da música
 * nome do artista
-* duração da música
+* duração da música (em segundos)
+
+### Leitura a partir de arquivo
+
+Também é possível carregar músicas automaticamente a partir do arquivo **`musics.txt`**.
+
+Formato esperado do arquivo:
+
+```
+Artista;Musica;Duracao
+```
+
+Exemplo:
+
+```
+Eminem;Lose Yourself;326
+Coldplay;Viva La Vida;242
+Adele;Rolling in the Deep;228
+```
 
 ---
 
@@ -138,26 +160,6 @@ O sistema calcula:
 * música mais curta
 * duração total da playlist
 * duração média das músicas
-
----
-
-## Carregar playlist de arquivo
-
-Permite carregar músicas automaticamente de um arquivo `.txt`.
-
-Formato esperado:
-
-```
-Artista;Musica;Duracao
-```
-
-Exemplo:
-
-```
-Eminem;Lose Yourself;326
-Coldplay;Viva La Vida;242
-Adele;Rolling in the Deep;228
-```
 
 ---
 
