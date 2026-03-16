@@ -134,21 +134,9 @@ Permite ordenar a playlist com base na **duração das músicas**.
 
 ---
 
-## Exibir playlist
+## Salvar playlist em arquivo
 
-Mostra todas as músicas armazenadas na playlist:
-
-* nome da música
-* artista
-* duração
-
----
-
-## Executar playlist
-
-Simula a reprodução da playlist percorrendo a lista circular.
-
-O usuário pode escolher quantas vezes a playlist será reproduzida.
+Permite salvar todas as músicas da playlist em um arquivo `.txt`.
 
 ---
 
@@ -160,12 +148,25 @@ O sistema calcula:
 * música mais curta
 * duração total da playlist
 * duração média das músicas
+* 
 
 ---
 
-## Salvar playlist em arquivo
+## Executar playlist
 
-Permite salvar todas as músicas da playlist em um arquivo `.txt`.
+Simula a reprodução da playlist percorrendo a lista circular.
+
+O usuário pode escolher quantas vezes a playlist será reproduzida.
+
+---
+
+## Exibir playlist
+
+Mostra todas as músicas armazenadas na playlist:
+
+* nome da música
+* artista
+* duração
 
 ---
 
@@ -230,8 +231,8 @@ Para compilar e executar o projeto é necessário:
 Clone o repositório:
 
 ```bash
-git clone git@github.com:natamleao/Playlist-C.git
-cd Playlist-C
+git git@github.com:natamleao/Circular-Linked-List.git
+cd Circular-Linked-List
 ```
 
 ---
