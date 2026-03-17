@@ -148,7 +148,6 @@ O sistema calcula:
 * música mais curta
 * duração total da playlist
 * duração média das músicas
-* 
 
 ---
 
