@@ -188,7 +188,7 @@ struct _music{
     char *_musicName;
     char *_artistName;
     unsigned int _durationTime;
-    struct _music *_next;
+    struct _music *_next; 
 };
 ```
 
@@ -197,7 +197,7 @@ struct _music{
 # Estrutura do projeto
 
 ```
-Playlist-C/
+Playlist-Manager/
 │
 ├── app/             # Arquivos principais da aplicação (main)
 ├── bin/             # Executáveis gerados
@@ -277,6 +277,6 @@ Este projeto está licenciado sob a **Licença MIT**.
 
 **Natam Leão Ferreira**
 
-Data: **2026**
+Conclusão: **2026**
 
 ---
