@@ -154,7 +154,7 @@ struct _music{
 ```
 Playlist-Manager/
 │
-├── app/             # Arquivos principais da aplicação (main)
+├── app/             # Arquivo principal da aplicação (main)
 ├── bin/             # Executáveis gerados
 ├── include/         # Arquivos de cabeçalho (.h)
 ├── obj/             # Arquivos objeto (.o)
