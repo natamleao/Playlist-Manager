@@ -219,7 +219,7 @@ Exemplo de execução do programa no terminal:
 Clone o repositório:
 
 ```bash
-git git@github.com:natamleao/Playlist-Manager.git
+git clone git@github.com:natamleao/Playlist-Manager.git
 cd Playlist-Manager
 ```
 
