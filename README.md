@@ -1,4 +1,4 @@
-# Playlist Manager em C
+# *Playlist Manager* em C
 
 ![Language](https://img.shields.io/badge/language-C-blue)
 ![Standard](https://img.shields.io/badge/standard-C11-orange)
@@ -11,9 +11,9 @@
 ## Sobre o projeto
 
 > [!NOTE]
-> Este projeto implementa um **gerenciador de playlist de músicas em C**, utilizando **lista encadeada circular** como estrutura de dados principal.
+> Este projeto implementa um **gerenciador de *playlist* de músicas em C**, utilizando **lista encadeada circular** como estrutura de dados principal.
 
-O sistema permite **armazenar, manipular e analisar músicas** dentro de uma playlist, oferecendo funcionalidades como:
+O sistema permite **armazenar, manipular e analisar músicas** dentro de uma *playlist*, oferecendo funcionalidades como:
 
 * inserção
 * remoção
@@ -55,7 +55,7 @@ Este projeto utiliza diversos conceitos fundamentais da linguagem C:
 
 ### Adicionar música
 
-O sistema permite adicionar músicas à playlist de duas formas:
+O sistema permite adicionar músicas à *playlist* de duas formas:
 
 ### Inserção manual
 
@@ -85,38 +85,38 @@ Adele;Rolling in the Deep;228
 
 ### Remover música
 
-Remove uma música da playlist através do **nome da música**.
+Remove uma música da *playlist* através do **nome da música**.
 
 ### Buscar música
 
-Localiza uma música específica dentro da playlist.
+Localiza uma música específica dentro da *playlist*.
 
-### Ordenar playlist
+### Ordenar *playlist*
 
-Permite ordenar a playlist com base na **duração das músicas**.
+Permite ordenar a *playlist* com base na **duração das músicas**.
 
-### Salvar playlist em arquivo
+### Salvar  em arquivo
 
-Permite salvar todas as músicas da playlist em um arquivo `.txt`.
+Permite salvar todas as músicas da *playlist* em um arquivo `.txt`.
 
-### Estatísticas da playlist
+### Estatísticas da *playlist*
 
 O sistema calcula:
 
 * música mais longa
 * música mais curta
-* duração total da playlist
+* duração total da *playlist*
 * duração média das músicas
 
-### Executar playlist
+### Executar *playlist*
 
 Simula a reprodução da playlist percorrendo a lista circular.
 
-O usuário pode escolher quantas vezes a playlist será reproduzida.
+O usuário pode escolher quantas vezes a *playlist* será reproduzida.
 
-### Exibir playlist
+### Exibir *playlist*
 
-Mostra todas as músicas armazenadas na playlist:
+Mostra todas as músicas armazenadas na *playlist*:
 
 * nome da música
 * artista
@@ -126,7 +126,7 @@ Mostra todas as músicas armazenadas na playlist:
 
 ## Representação da estrutura de dados
 
-A playlist é implementada utilizando **lista encadeada circular**.
+A *playlist* é implementada utilizando **lista encadeada circular**.
 
 ```
 HEAD
@@ -155,17 +155,17 @@ struct _music{
 Playlist-Manager/
 │
 ├── app/             # Arquivo principal da aplicação (main)
-├── bin/             # Executáveis gerados
+├── bin/             # Executável gerado
 ├── include/         # Arquivos de cabeçalho (.h)
-├── obj/             # Arquivos objeto (.o)
+├── build/           # Arquivos objeto (.o)
 ├── src/             # Código-fonte da aplicação (.c)
 │
 ├── Musics.txt       # Arquivo contendo as músicas para carregar
 ├── My Playlist.txt  # Arquivo que guarda as músicas salvas pelo usuário
 │
 ├── Makefile         # Regras de compilação
-├── README.md        # Documentação do projeto
-└── LICENSE          # Licença do projeto
+├── README.md        # Documentação 
+└── LICENSE          # Licença do 
 ```
 
 ---
@@ -270,3 +270,5 @@ make cleanapp
 Conclusão: **2026**
 
 ---
+
+
