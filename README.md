@@ -165,7 +165,7 @@ Playlist-Manager/
 │
 ├── Makefile         # Regras de compilação
 ├── README.md        # Documentação 
-└── LICENSE          # Licença do 
+└── LICENSE          # Licença 
 ```
 
 ---
