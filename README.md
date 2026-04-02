@@ -1,4 +1,4 @@
-# *Playlist Manager* em C
+# *Playlist Manager*
 
 ![Language](https://img.shields.io/badge/language-C-blue)
 ![Standard](https://img.shields.io/badge/standard-C11-orange)
