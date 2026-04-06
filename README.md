@@ -257,9 +257,10 @@ make cleanapp
 ---
 
 > [!WARNING]
+>
 > ## Licença
 >
-> Este projeto está licenciado sob a **Licença MIT**.
+> Este projeto está sob a **Licença MIT**.
 
 ---
 
@@ -270,5 +271,3 @@ make cleanapp
 Conclusão: **2026**
 
 ---
-
-
